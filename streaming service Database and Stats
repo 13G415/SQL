@@ -1,0 +1,28 @@
+--Create a streaming serice database
+
+CREATE TABLE streaming_service (id INTEGER PRIMARY KEY, name TEXT, release_year INTEGER, genre TEXT, price INTEGER, critic_score INTEGER); 
+
+INSERT INTO streaming_service VALUES (1, "goodfellas", 1990, "drama", 9.99, 4.8);
+INSERT INTO streaming_service VALUES (2, "forrest gump", 1994, "drama", 14.99, 4.8);
+INSERT INTO streaming_service VALUES (3, "interview with a vampire", 1994, "horror", 14.99,  3.5);
+INSERT INTO streaming_service VALUES (4, "avengers", 2012, "action", 12.99, 3.4);
+INSERT INTO streaming_service VALUES (5, "the matrix", 1999, "sci-fi", 9.99, 4.7);
+INSERT INTO streaming_service VALUES (6, "star wars", 1977, "sci-fi", 14.99, 4.6);
+INSERT INTO streaming_service VALUES (7, "philadelephia", 1993, "drama", 9.99, 4.6);
+INSERT INTO streaming_service VALUES (8, "halloween", 1978,"horror", 9.99, 1.9);
+INSERT INTO streaming_service VALUES (9, "the exorcist", 1973, "horror", 9.99, 4.2);
+INSERT INTO streaming_service VALUES (10, "silence of the lambs", 1991,"horror", 9.99, 4.7);
+INSERT INTO streaming_service VALUES (11, "american history x", 1998, "drama", 14.99, 4.7);
+INSERT INTO streaming_service VALUES (12, "fight club", 1999, "action", 9.99, 4.7);
+INSERT INTO streaming_service VALUES (13, "wolf of wallstreet", 2013, "comedy", 19.99, 4.5);
+INSERT INTO streaming_service VALUES (14, "scream", 1996, "horror", 14.99, 4.5);
+INSERT INTO streaming_service VALUES (15, "boogie nights", 1997, "drama", 12.99, 4.4);
+
+--display the database ordered by price.
+SELECT * FROM streaming_service 
+ORDER BY price;
+
+--what movies released after 1997?
+SELECT * FROM streaming_service
+WHERE release_year > 1997 
+ORDER BY release_year;
